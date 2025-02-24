@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Data Science</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px cyan;
+            transition: transform 0.5s;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+        .social-links a {
+            color: cyan;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: lime;
+        }
+        section {
+            padding: 50px 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .video-container video {
+            width: 45%;
+            border-radius: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="c:\Users\Dell\Mon Portofolio\ma photo.jpg" alt="Photo de Housséni YABRE" class="profile-pic">
+            <div class="profile-info">
+                <h1>Housséni YABRE</h1>
+                <p>Étudiant en Data Science & Intelligence Artificielle</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#contact"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <main>
+        <section id="about">
+            <h2>À propos</h2>
+            <p>Passionné par l'Intelligence Artificielle et la Data Science, j'explore les données pour en extraire des insights pertinents et créer des solutions innovantes: l'art de rendre les données utiles.</p>
+        </section>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <ul>
+                <li>Python, R, SQL</li>
+                <li>Machine Learning & Deep Learning</li>
+                <li>Analyse de données & Visualisation</li>
+                <li>Développement Web (HTML, CSS, JavaScript)</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projets</h2>
+            <div class="project">
+                <h3>Analyse Exploratoire de Données</h3>
+                <p>Exploration et visualisation d'un dataset sur les tendances du marché.</p>
+            </div>
+            <div class="project">
+                <h3>Modèle de Prédiction</h3>
+                <p>Développement d'un modèle de machine learning pour la prédiction des ventes.</p>
+            </div>
+            <div class="project">
+                <h3>Détection d'Anomalies</h3>
+                <p>Utilisation d'algorithmes de clustering pour détecter des anomalies dans les données financières.</p>
+            </div>
+        </section>
+        <section id="data-viz">
+            <h2>Visualisation de Données</h2>
+            <canvas id="dataChart"></canvas>
+        </section>
+        <section id="videos">
+            <h2>Vidéos</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:housseniyabre20@gmail.com">housseniyabre20@gmail.com</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/housseniyabre</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Housséni Yabré - Portfolio Data Science</p>
+    </footer>
+    <script>
+        const ctx = document.getElementById('dataChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Projet 1', 'Projet 2', 'Projet 3'],
+                datasets: [{
+                    label: 'Performances',
+                    data: [85, 90, 78],
+                    backgroundColor: ['blue', 'green', 'purple']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
